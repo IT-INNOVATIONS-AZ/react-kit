@@ -1,20 +1,40 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { useTranslation } from "react-i18next";
+import { useChangeLang, useGetLang } from "./hooks/useChangeLang";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const { t } = useTranslation();
+  const { changeToAz, changeToEn } = useChangeLang();
+  const { lang } = useGetLang();
+  console.log(lang);
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
+        <p>{t("hello")} Vite + React!</p>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
           </button>
         </p>
+        <select
+          name="lang"
+          id="lang"
+          onChange={(e) => {
+            if (e.target.value === "az") {
+              changeToAz();
+            } else {
+              changeToEn();
+            }
+          }}
+        >
+          <option value="az">Az</option>
+          <option value="en">En</option>
+        </select>
         <p>
           Edit <code>App.tsx</code> and save to test HMR updates.
         </p>
@@ -27,7 +47,7 @@ function App() {
           >
             Learn React
           </a>
-          {' | '}
+          {" | "}
           <a
             className="App-link"
             href="https://vitejs.dev/guide/features.html"
@@ -39,7 +59,7 @@ function App() {
         </p>
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
