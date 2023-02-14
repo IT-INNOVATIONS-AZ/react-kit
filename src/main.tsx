@@ -3,8 +3,6 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { useLangInit } from "./lang/LangInit";
 
-import "./assets/scss/main.scss";
-
 const Main = () => {
   useLangInit();
   return (
