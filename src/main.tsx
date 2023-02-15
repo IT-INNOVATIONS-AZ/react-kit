@@ -11,7 +11,6 @@ const Main = () => {
   return (
     <React.StrictMode>
       <App />
-      <Button>Text</Button>
     </React.StrictMode>
   );
 };
