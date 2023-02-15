@@ -1,0 +1,381 @@
+.react-kit-tooltip {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: "tnum";
+    position: absolute;
+    z-index: 1070;
+    display: block;
+    width: -moz-max-content;
+    width: max-content;
+    width: intrinsic;
+    max-width: 250px;
+    visibility: visible;
+}
+.react-kit-tooltip-content {
+    position: relative;
+}
+.react-kit-tooltip-hidden {
+    display: none;
+}
+.react-kit-tooltip-placement-top,
+.react-kit-tooltip-placement-topLeft,
+.react-kit-tooltip-placement-topRight {
+    padding-bottom: 14.3137085px;
+}
+.react-kit-tooltip-placement-right,
+.react-kit-tooltip-placement-rightTop,
+.react-kit-tooltip-placement-rightBottom {
+    padding-left: 14.3137085px;
+}
+.react-kit-tooltip-placement-bottom,
+.react-kit-tooltip-placement-bottomLeft,
+.react-kit-tooltip-placement-bottomRight {
+    padding-top: 14.3137085px;
+}
+.react-kit-tooltip-placement-left,
+.react-kit-tooltip-placement-leftTop,
+.react-kit-tooltip-placement-leftBottom {
+    padding-right: 14.3137085px;
+}
+.react-kit-tooltip-inner {
+    min-width: 30px;
+    z-index: 99999999999999;
+    color: #fff;
+    text-align: left;
+    text-decoration: none;
+    word-wrap: break-word;
+    background: #ffffff;
+    border: 1px solid #e8ebef;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0657269);
+    border-radius: 5px;
+}
+.react-kit-tooltip-inner p {
+    border-radius: 5px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 13px;
+    background: #adb7c5;
+    text-align: center;
+    margin: 0;
+    padding: 4px 16px 8px;
+}
+
+.react-kit-tooltip-title-border-t-rl{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+.react-kit-tooltip-inner-body {
+    width: "100%";
+    height: "auto";
+    background-color: "white";
+    color: black !important;
+    padding: 7px 10px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+}
+.react-kit-tooltip-arrow {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 22px;
+    height: 22px;
+    overflow: hidden;
+    background: transparent;
+    pointer-events: none;
+}
+.react-kit-tooltip-arrow-content {
+    --antd-arrow-background-color: #adb7c5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 11.3137085px;
+    height: 11.3137085px;
+    margin: auto;
+    content: "";
+    pointer-events: auto;
+    border-radius: 0 0 2px;
+    pointer-events: none;
+    &::before {
+        position: absolute;
+        top: -11.3137085px;
+        left: -11.3137085px;
+        width: 33.9411255px;
+        height: 33.9411255px;
+        background: var(--antd-arrow-background-color);
+        background-repeat: no-repeat;
+        background-position: -10px -10px;
+        content: "";
+        -webkit-clip-path: inset(33% 33%);
+        clip-path: inset(33% 33%);
+        -webkit-clip-path: path(
+            "M 9.849242404917499 24.091883092036785 A 5 5 0 0 1 13.384776310850237 22.627416997969522 L 20.627416997969522 22.627416997969522 A 2 2 0 0 0 22.627416997969522 20.627416997969522 L 22.627416997969522 13.384776310850237 A 5 5 0 0 1 24.091883092036785 9.849242404917499 L 23.091883092036785 9.849242404917499 L 9.849242404917499 23.091883092036785 Z"
+        );
+        clip-path: path(
+            "M 9.849242404917499 24.091883092036785 A 5 5 0 0 1 13.384776310850237 22.627416997969522 L 20.627416997969522 22.627416997969522 A 2 2 0 0 0 22.627416997969522 20.627416997969522 L 22.627416997969522 13.384776310850237 A 5 5 0 0 1 24.091883092036785 9.849242404917499 L 23.091883092036785 9.849242404917499 L 9.849242404917499 23.091883092036785 Z"
+        );
+    }
+}
+.react-kit-tooltip-placement-top .react-kit-tooltip-arrow,
+.react-kit-tooltip-placement-topLeft .react-kit-tooltip-arrow,
+.react-kit-tooltip-placement-topRight .react-kit-tooltip-arrow {
+    bottom: 0;
+    transform: translateY(100%);
+}
+.react-kit-tooltip-placement-top .react-kit-tooltip-arrow-content,
+.react-kit-tooltip-placement-topLeft .react-kit-tooltip-arrow-content,
+.react-kit-tooltip-placement-topRight .react-kit-tooltip-arrow-content {
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.07);
+    transform: translateY(-11px) rotate(45deg);
+}
+.react-kit-tooltip-placement-top {
+    .react-kit-tooltip-arrow {
+        left: 50%;
+        transform: translateY(100%) translateX(-50%);
+    }
+}
+.react-kit-tooltip-placement-topLeft {
+    .react-kit-tooltip-arrow {
+        left: 13px;
+    }
+}
+.react-kit-tooltip-placement-topRight {
+    .react-kit-tooltip-arrow {
+        right: 13px;
+    }
+}
+.react-kit-tooltip-placement-right .react-kit-tooltip-arrow,
+.react-kit-tooltip-placement-rightTop .react-kit-tooltip-arrow,
+.react-kit-tooltip-placement-rightBottom .react-kit-tooltip-arrow {
+    left: 0;
+    transform: translateX(-100%);
+}
+.react-kit-tooltip-placement-right .react-kit-tooltip-arrow-content,
+.react-kit-tooltip-placement-rightTop .react-kit-tooltip-arrow-content,
+.react-kit-tooltip-placement-rightBottom .react-kit-tooltip-arrow-content {
+    box-shadow: -3px 3px 7px rgba(0, 0, 0, 0.07);
+    transform: translateX(11px) rotate(135deg);
+}
+.react-kit-tooltip-placement-right {
+    .react-kit-tooltip-arrow {
+        top: 50%;
+        transform: translateX(-100%) translateY(-50%);
+    }
+}
+.react-kit-tooltip-placement-rightTop {
+    .react-kit-tooltip-arrow {
+        top: 5px;
+    }
+}
+.react-kit-tooltip-placement-rightBottom {
+    .react-kit-tooltip-arrow {
+        bottom: 5px;
+    }
+}
+.react-kit-tooltip-placement-left .react-kit-tooltip-arrow,
+.react-kit-tooltip-placement-leftTop .react-kit-tooltip-arrow,
+.react-kit-tooltip-placement-leftBottom .react-kit-tooltip-arrow {
+    right: 0;
+    transform: translateX(100%);
+}
+.react-kit-tooltip-placement-left .react-kit-tooltip-arrow-content,
+.react-kit-tooltip-placement-leftTop .react-kit-tooltip-arrow-content,
+.react-kit-tooltip-placement-leftBottom .react-kit-tooltip-arrow-content {
+    box-shadow: 3px -3px 7px rgba(0, 0, 0, 0.07);
+    transform: translateX(-11px) rotate(315deg);
+}
+.react-kit-tooltip-placement-left {
+    .react-kit-tooltip-arrow {
+        top: 50%;
+        transform: translateX(100%) translateY(-50%);
+    }
+}
+.react-kit-tooltip-placement-leftTop {
+    .react-kit-tooltip-arrow {
+        top: 5px;
+    }
+}
+.react-kit-tooltip-placement-leftBottom {
+    .react-kit-tooltip-arrow {
+        bottom: 5px;
+    }
+}
+.react-kit-tooltip-placement-bottom .react-kit-tooltip-arrow,
+.react-kit-tooltip-placement-bottomLeft .react-kit-tooltip-arrow,
+.react-kit-tooltip-placement-bottomRight .react-kit-tooltip-arrow {
+    top: 0;
+    transform: translateY(-100%);
+}
+.react-kit-tooltip-placement-bottom .react-kit-tooltip-arrow-content,
+.react-kit-tooltip-placement-bottomLeft .react-kit-tooltip-arrow-content,
+.react-kit-tooltip-placement-bottomRight .react-kit-tooltip-arrow-content {
+    box-shadow: -3px -3px 7px rgba(0, 0, 0, 0.07);
+    transform: translateY(11px) rotate(225deg);
+}
+.react-kit-tooltip-placement-bottom {
+    .react-kit-tooltip-arrow {
+        left: 50%;
+        transform: translateY(-100%) translateX(-50%);
+    }
+}
+.react-kit-tooltip-placement-bottomLeft {
+    .react-kit-tooltip-arrow {
+        left: 13px;
+    }
+}
+.react-kit-tooltip-placement-bottomRight {
+    .react-kit-tooltip-arrow {
+        right: 13px;
+    }
+}
+.react-kit-tooltip-pink {
+    .react-kit-tooltip-inner {
+        background-color: #eb2f96;
+    }
+    .react-kit-tooltip-arrow-content {
+        &::before {
+            background: #eb2f96;
+        }
+    }
+}
+.react-kit-tooltip-magenta {
+    .react-kit-tooltip-inner {
+        background-color: #eb2f96;
+    }
+    .react-kit-tooltip-arrow-content {
+        &::before {
+            background: #eb2f96;
+        }
+    }
+}
+.react-kit-tooltip-red {
+    .react-kit-tooltip-inner {
+        background-color: #f5222d;
+    }
+    .react-kit-tooltip-arrow-content {
+        &::before {
+            background: #f5222d;
+        }
+    }
+}
+.react-kit-tooltip-volcano {
+    .react-kit-tooltip-inner {
+        background-color: #fa541c;
+    }
+    .react-kit-tooltip-arrow-content {
+        &::before {
+            background: #fa541c;
+        }
+    }
+}
+.react-kit-tooltip-orange {
+    .react-kit-tooltip-inner {
+        background-color: #fa8c16;
+    }
+    .react-kit-tooltip-arrow-content {
+        &::before {
+            background: #fa8c16;
+        }
+    }
+}
+.react-kit-tooltip-yellow {
+    .react-kit-tooltip-inner {
+        background-color: #fadb14;
+    }
+    .react-kit-tooltip-arrow-content {
+        &::before {
+            background: #fadb14;
+        }
+    }
+}
+.react-kit-tooltip-gold {
+    .react-kit-tooltip-inner {
+        background-color: #faad14;
+    }
+    .react-kit-tooltip-arrow-content {
+        &::before {
+            background: #faad14;
+        }
+    }
+}
+.react-kit-tooltip-cyan {
+    .react-kit-tooltip-inner {
+        background-color: #13c2c2;
+    }
+    .react-kit-tooltip-arrow-content {
+        &::before {
+            background: #13c2c2;
+        }
+    }
+}
+.react-kit-tooltip-lime {
+    .react-kit-tooltip-inner {
+        background-color: #a0d911;
+    }
+    .react-kit-tooltip-arrow-content {
+        &::before {
+            background: #a0d911;
+        }
+    }
+}
+.react-kit-tooltip-green {
+    .react-kit-tooltip-inner {
+        background-color: #52c41a;
+    }
+    .react-kit-tooltip-arrow-content {
+        &::before {
+            background: #52c41a;
+        }
+    }
+}
+.react-kit-tooltip-blue {
+    .react-kit-tooltip-inner {
+        background-color: #1890ff;
+    }
+    .react-kit-tooltip-arrow-content {
+        &::before {
+            background: #1890ff;
+        }
+    }
+}
+.react-kit-tooltip-geekblue {
+    .react-kit-tooltip-inner {
+        background-color: #2f54eb;
+    }
+    .react-kit-tooltip-arrow-content {
+        &::before {
+            background: #2f54eb;
+        }
+    }
+}
+.react-kit-tooltip-purple {
+    .react-kit-tooltip-inner {
+        background-color: #722ed1;
+    }
+    .react-kit-tooltip-arrow-content {
+        &::before {
+            background: #722ed1;
+        }
+    }
+}
+.react-kit-tooltip-rtl {
+    direction: rtl;
+    .react-kit-tooltip-inner {
+        text-align: right;
+    }
+}
