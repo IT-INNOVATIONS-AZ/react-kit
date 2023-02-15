@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Button, Tooltip as AntTooltip } from "antd";
+import { Tooltip as AntTooltip } from "antd";
 import cn from "clsx";
 import "./tooltip.style.scss";
 
@@ -23,7 +23,6 @@ const Tooltip: FC<TooltipProps> = ({ children, title, body, placement = "top" })
                                 [`react-kit-tooltip-title-border-t-rl`]: Boolean(body),
                             })}
                         >
-                            {" "}
                             {title}
                         </p>
 
