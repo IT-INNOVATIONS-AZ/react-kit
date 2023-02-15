@@ -1,0 +1,377 @@
+.react-kit-typography {
+  color: #555555;
+  word-break: break-word;
+  &.react-kit-typography-secondary {
+    color: rgba(0, 0, 0, 0.45);
+  }
+  &.react-kit-typography-success {
+    color: #52c41a;
+  }
+  &.react-kit-typography-warning {
+    color: #faad14;
+  }
+  &.react-kit-typography-danger {
+    color: #ff4d4f;
+  }
+  &.react-kit-typography-disabled {
+    color: rgba(0, 0, 0, 0.25);
+    cursor: not-allowed;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  code {
+    margin: 0 0.2em;
+    padding: 0.2em 0.4em 0.1em;
+    font-size: 85%;
+    background: rgba(150, 150, 150, 0.1);
+    border: 1px solid rgba(100, 100, 100, 0.2);
+    border-radius: 3px;
+  }
+  kbd {
+    margin: 0 0.2em;
+    padding: 0.15em 0.4em 0.1em;
+    font-size: 90%;
+    background: rgba(150, 150, 150, 0.06);
+    border: 1px solid rgba(100, 100, 100, 0.2);
+    border-bottom-width: 2px;
+    border-radius: 3px;
+  }
+  mark {
+    padding: 0;
+    background-color: #ffe58f;
+  }
+  strong {
+    font-weight: 600;
+  }
+  ul {
+    list-style-type: circle;
+    ul {
+      list-style-type: disc;
+    }
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  pre {
+    padding: 0.4em 0.6em;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background: rgba(150, 150, 150, 0.1);
+    border: 1px solid rgba(100, 100, 100, 0.2);
+    border-radius: 3px;
+    code {
+      display: inline;
+      margin: 0;
+      padding: 0;
+      font-size: inherit;
+      font-family: inherit;
+      background: transparent;
+      border: 0;
+    }
+  }
+  blockquote {
+    padding: 0 0 0 0.6em;
+    border-left: 4px solid rgba(100, 100, 100, 0.2);
+    opacity: 0.85;
+  }
+}
+a.react-kit-typography.react-kit-typography-danger:active,
+a.react-kit-typography.react-kit-typography-danger:focus {
+  color: #d9363e;
+}
+a {
+  &.react-kit-typography {
+    &.react-kit-typography-danger {
+      &:hover {
+        color: #ff7875;
+      }
+    }
+  }
+}
+div.react-kit-typography,
+.react-kit-typography p {
+  margin-bottom: 1em;
+}
+h1.react-kit-typography,
+div.react-kit-typography-h1,
+div.react-kit-typography-h1 > textarea,
+.react-kit-typography h1 {
+  margin-bottom: 0.5em;
+  color: #555555;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.23;
+}
+h2.react-kit-typography,
+div.react-kit-typography-h2,
+div.react-kit-typography-h2 > textarea,
+.react-kit-typography h2 {
+  margin-bottom: 0.5em;
+  color: #555555;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1.35;
+}
+h3.react-kit-typography,
+div.react-kit-typography-h3,
+div.react-kit-typography-h3 > textarea,
+.react-kit-typography h3 {
+  margin-bottom: 0.5em;
+  color: #555555;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.35;
+}
+h4.react-kit-typography,
+div.react-kit-typography-h4,
+div.react-kit-typography-h4 > textarea,
+.react-kit-typography h4 {
+  margin-bottom: 0.5em;
+  color: #555555;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.4;
+}
+h5.react-kit-typography,
+div.react-kit-typography-h5,
+div.react-kit-typography-h5 > textarea,
+.react-kit-typography h5 {
+  margin-bottom: 0.5em;
+  color: #555555;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+}
+h6.react-kit-typography,
+div.react-kit-typography-h6,
+div.react-kit-typography-h6 > textarea,
+.react-kit-typography h6 {
+  margin-bottom: 0.5em;
+  color: #555555;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.react-kit-typography + h1.react-kit-typography,
+.react-kit-typography + h2.react-kit-typography,
+.react-kit-typography + h3.react-kit-typography,
+.react-kit-typography + h4.react-kit-typography,
+.react-kit-typography + h5.react-kit-typography {
+  margin-top: 1.2em;
+}
+.react-kit-typography div + h1,
+.react-kit-typography ul + h1,
+.react-kit-typography li + h1,
+.react-kit-typography p + h1,
+.react-kit-typography h1 + h1,
+.react-kit-typography h2 + h1,
+.react-kit-typography h3 + h1,
+.react-kit-typography h4 + h1,
+.react-kit-typography h5 + h1,
+.react-kit-typography div + h2,
+.react-kit-typography ul + h2,
+.react-kit-typography li + h2,
+.react-kit-typography p + h2,
+.react-kit-typography h1 + h2,
+.react-kit-typography h2 + h2,
+.react-kit-typography h3 + h2,
+.react-kit-typography h4 + h2,
+.react-kit-typography h5 + h2,
+.react-kit-typography div + h3,
+.react-kit-typography ul + h3,
+.react-kit-typography li + h3,
+.react-kit-typography p + h3,
+.react-kit-typography h1 + h3,
+.react-kit-typography h2 + h3,
+.react-kit-typography h3 + h3,
+.react-kit-typography h4 + h3,
+.react-kit-typography h5 + h3,
+.react-kit-typography div + h4,
+.react-kit-typography ul + h4,
+.react-kit-typography li + h4,
+.react-kit-typography p + h4,
+.react-kit-typography h1 + h4,
+.react-kit-typography h2 + h4,
+.react-kit-typography h3 + h4,
+.react-kit-typography h4 + h4,
+.react-kit-typography h5 + h4,
+.react-kit-typography div + h5,
+.react-kit-typography ul + h5,
+.react-kit-typography li + h5,
+.react-kit-typography p + h5,
+.react-kit-typography h1 + h5,
+.react-kit-typography h2 + h5,
+.react-kit-typography h3 + h5,
+.react-kit-typography h4 + h5,
+.react-kit-typography h5 + h5 {
+  margin-top: 1.2em;
+}
+a.react-kit-typography-ellipsis,
+span.react-kit-typography-ellipsis {
+  display: inline-block;
+  max-width: 100%;
+}
+a.react-kit-typography,
+.react-kit-typography a {
+  color: #1890ff;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+a.react-kit-typography:focus-visible,
+.react-kit-typography a:focus-visible,
+a.react-kit-typography:hover,
+.react-kit-typography a:hover {
+  color: #40a9ff;
+}
+a.react-kit-typography:active,
+.react-kit-typography a:active {
+  color: #096dd9;
+}
+a.react-kit-typography:active,
+.react-kit-typography a:active,
+a.react-kit-typography:hover,
+.react-kit-typography a:hover {
+  text-decoration: none;
+}
+a.react-kit-typography[disabled],
+.react-kit-typography a[disabled],
+a.react-kit-typography.react-kit-typography-disabled,
+.react-kit-typography a.react-kit-typography-disabled {
+  color: rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
+}
+a.react-kit-typography[disabled]:active,
+.react-kit-typography a[disabled]:active,
+a.react-kit-typography.react-kit-typography-disabled:active,
+.react-kit-typography a.react-kit-typography-disabled:active,
+a.react-kit-typography[disabled]:hover,
+.react-kit-typography a[disabled]:hover,
+a.react-kit-typography.react-kit-typography-disabled:hover,
+.react-kit-typography a.react-kit-typography-disabled:hover {
+  color: rgba(0, 0, 0, 0.25);
+}
+a.react-kit-typography[disabled]:active,
+.react-kit-typography a[disabled]:active,
+a.react-kit-typography.react-kit-typography-disabled:active,
+.react-kit-typography a.react-kit-typography-disabled:active {
+  pointer-events: none;
+}
+.react-kit-typography u,
+.react-kit-typography ins {
+  text-decoration: underline;
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+}
+.react-kit-typography s,
+.react-kit-typography del {
+  text-decoration: line-through;
+}
+.react-kit-typography-expand,
+.react-kit-typography-edit,
+.react-kit-typography-copy {
+  color: #1890ff;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  margin-left: 4px;
+}
+.react-kit-typography-expand:focus-visible,
+.react-kit-typography-edit:focus-visible,
+.react-kit-typography-copy:focus-visible,
+.react-kit-typography-expand:hover,
+.react-kit-typography-edit:hover,
+.react-kit-typography-copy:hover {
+  color: #40a9ff;
+}
+.react-kit-typography-expand:active,
+.react-kit-typography-edit:active,
+.react-kit-typography-copy:active {
+  color: #096dd9;
+}
+.react-kit-typography-copy-success,
+.react-kit-typography-copy-success:hover,
+.react-kit-typography-copy-success:focus {
+  color: #52c41a;
+}
+.react-kit-typography-edit-content {
+  position: relative;
+  textarea {
+    height: 1em;
+    margin: 0 !important;
+    -moz-transition: none;
+  }
+}
+div {
+  &.react-kit-typography-edit-content {
+    left: -12px;
+    margin-top: -5px;
+    margin-bottom: calc(1em - 4px - 1px);
+    &.react-kit-typography-rtl {
+      right: -12px;
+      left: auto;
+    }
+  }
+}
+.react-kit-typography-edit-content-confirm {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  color: rgba(0, 0, 0, 0.45);
+  font-weight: normal;
+  font-size: 14px;
+  font-style: normal;
+  pointer-events: none;
+}
+.react-kit-typography ul,
+.react-kit-typography ol {
+  margin: 0 0 1em;
+  padding: 0;
+}
+.react-kit-typography ul li,
+.react-kit-typography ol li {
+  margin: 0 0 0 20px;
+  padding: 0 0 0 4px;
+}
+.react-kit-typography pre,
+.react-kit-typography blockquote {
+  margin: 1em 0;
+}
+.react-kit-typography-single-line {
+  white-space: nowrap;
+}
+.react-kit-typography-ellipsis-single-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+a.react-kit-typography-ellipsis-single-line,
+span.react-kit-typography-ellipsis-single-line {
+  vertical-align: bottom;
+}
+.react-kit-typography-ellipsis-multiple-line {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.react-kit-typography--subheading {
+  color: #999999 !important;
+}
+
+$typography-sizes: (
+  "12": 12px,
+  "16": 16px,
+  "18": 18px,
+  "20": 20px,
+  "24": 24px,
+);
+
+@each $size, $value in $typography-sizes {
+  .react-kit-typography--#{$size} {
+    font-size: $value !important;
+  }
+}
