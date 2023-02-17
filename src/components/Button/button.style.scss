@@ -1,0 +1,25 @@
+.btn-group-icon{
+    background-color: #ddd;
+    width:128px;
+    padding: 5px;
+    border-radius: 12px;
+    
+    button {
+      height: 32px;
+      width: 32px;
+      border: none;
+      background-color: inherit;
+      
+      &:hover {
+        background-color:#ccc;
+      }
+    }
+    
+    button:first-child {
+      border-radius: 8px 0 0 8px;
+    }
+    
+    button:last-child {
+      border-radius: 0 8px 8px 0;
+    }
+  }

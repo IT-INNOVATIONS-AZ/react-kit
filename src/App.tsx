@@ -3,7 +3,14 @@ import { useChangeLang, useGetLang } from "./hooks/useChangeLang";
 import { Button } from "antd";
 import { Typography } from "./components/Typography/typography";
 import Tooltip from "./components/Tooltip/Tooltip";
+import ButtonGroup from "./components/Button/buttonGroup";
+import { ReactComponent as PinIcon } from "./assets/img/pin.svg";
+import {ReactComponent as HeartIcon} from "./assets/img/heart.svg";
+import {ReactComponent as IconIcon} from "./assets/img/icon.svg";
+import {ReactComponent as SettingIcon} from "./assets/img/setting.svg"
 
+
+const icons = [PinIcon, HeartIcon,IconIcon,SettingIcon]
 function App() {
     const { t } = useTranslation();
     const { changeToAz, changeToEn } = useChangeLang();
@@ -11,56 +18,19 @@ function App() {
 
     return (
         <div className="App">
-            <div
-                style={{
-                    boxSizing: "border-box",
-                    padding: "40px",
-                    width: "100%",
-                    height: "100vh",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                }}
-            >
-                <Tooltip
-                    title="bottom tooltip"
-                    placement="bottom"
-                    body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, explicabo."
-                >
-                    bottom
-                </Tooltip>
-                <hr />
-                <Tooltip
-                    title="top tooltip"
-                    placement="top"
-                    body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, explicabo."
-                >
-                    top
-                </Tooltip>
-                <hr />
-                <Tooltip
-                    title="right tooltip"
-                    placement="right"
-                    body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, explicabo."
-                >
-                    right
-                </Tooltip>
-                <hr />
-                <Tooltip
-                    title="left tooltip"
-                    placement="left"
-                    body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, explicabo."
-                >
-                    left
-                </Tooltip>
-                <hr />
-                <Tooltip
-                    title="default tooltip"
-                    body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, explicabo."
-                >
-                    default
-                </Tooltip>
-            </div>
+            
+         <ButtonGroup type="icon" icons={
+        <>
+            {icons.map((Item,index) =>(
+               <button key={index}>
+                 <Item/>
+               </button>
+            ))}
+                  
+        </>
+      }
+         />
+            
         </div>
     );
 }
