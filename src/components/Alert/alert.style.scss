@@ -1,0 +1,282 @@
+.react-kit-alert {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: "tnum";
+    position: relative;
+    display: flex;
+    align-items: center;
+    word-wrap: break-word;
+    border-radius: 2px;
+    max-width: 740px;
+    box-sizing: border-box;
+    &.react-kit-alert-motion-leave {
+        overflow: hidden;
+        opacity: 1;
+        transition: max-height 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86),
+            opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), padding-top 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86),
+            padding-bottom 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86),
+            margin-bottom 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+    }
+    &.react-kit-alert-motion-leave-active {
+        max-height: 0;
+        margin-bottom: 0 !important;
+        padding-top: 0;
+        padding-bottom: 0;
+        opacity: 0;
+    }
+    &.react-kit-alert-rtl {
+        direction: rtl;
+    }
+}
+.react-kit-alert-content {
+    flex: 1;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 7px 20px;
+}
+.react-kit-alert-icon {
+    padding: 20px;
+}
+.react-kit-alert-description {
+    display: none;
+    font-size: 14px;
+    line-height: 22px;
+}
+.react-kit-alert-success {
+    background-color: #4ce1b6;
+    border: 1px solid #4ce1b6;
+    color: white;
+    .react-kit-alert-icon {
+        color: white;
+        font-family: "Material Design Icons";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 20px;
+        background-color: #55e5bb;
+    }
+}
+.react-kit-alert-info {
+    background-color: #70bbfd;
+    border: 1px solid #70bbfd;
+    color: white;
+    .react-kit-alert-icon {
+        color: white;
+        font-family: "Material Design Icons";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 20px;
+        background-color: #87c3f7;
+    }
+}
+.react-kit-alert-warning {
+    background-color: #f6da6e;
+    border: 1px solid #f6da6e;
+    color: white;
+    .react-kit-alert-icon {
+        color: white;
+        font-family: "Material Design Icons";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 20px;
+        background-color: #f4dd87;
+    }
+}
+.react-kit-alert-error {
+    background-color: #f6816e;
+    border: 1px solid #f6816e;
+    color: white;
+    .react-kit-alert-icon {
+        color: white;
+        font-family: "Material Design Icons";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 20px;
+        background-color: #f88e7d;
+    }
+    .react-kit-alert-description {
+        & > pre {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+// inline styles
+
+.react-kit-alert--inline {
+    &.react-kit-alert-success {
+        background-color: white;
+        border: 1px solid #4ce1b6;
+        color: black;
+    }
+
+    &.react-kit-alert-info {
+        background-color: white;
+        border: 1px solid #70bbfd;
+        color: black;
+    }
+
+    &.react-kit-alert-warning {
+        background-color: white;
+        border: 1px solid #f6da6e;
+        color: black;
+    }
+
+    &.react-kit-alert-error {
+        background-color: white;
+        border: 1px solid #f6816e;
+        color: black;
+    }
+}
+
+// no color
+
+.react-kit-alert--no-color {
+    &.react-kit-alert-success {
+        background-color: white;
+        border: 1px solid #f2f4f7;
+        color: black;
+        .react-kit-alert-icon {
+            color: #4ce1b6;
+            background-color: white;
+            border: 1px solid #f2f4f7;
+        }
+    }
+    &.react-kit-alert-info {
+        background-color: white;
+        border: 1px solid #f2f4f7;
+        color: black;
+        .react-kit-alert-icon {
+            color: #70bbfd;
+            background-color: white;
+            border: 1px solid #f2f4f7;
+        }
+    }
+    &.react-kit-alert-warning {
+        background-color: white;
+        border: 1px solid #f2f4f7;
+        color: black;
+        .react-kit-alert-icon {
+            color: #f6da6e;
+            background-color: white;
+            border: 1px solid #f2f4f7;
+        }
+    }
+    &.react-kit-alert-error {
+        background-color: white;
+        border: 1px solid #f2f4f7;
+        color: black;
+        .react-kit-alert-icon {
+            color: #f6816e;
+            background-color: white;
+            border: 1px solid #f2f4f7;
+        }
+    }
+
+    .react-kit-alert-close-icon {
+        .anticon-close{
+            color: #999999;
+        }
+    }
+}
+
+.react-kit-alert-action {
+    margin-left: 8px;
+}
+.react-kit-alert-close-icon {
+    margin-left: 8px;
+    padding: 0;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 12px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    .anticon-close {
+        transition: color 0.3s;
+        margin: 24px;
+        color: #ffffff;
+        &:hover {
+            color: rgba(0, 0, 0, 0.75);
+        }
+    }
+}
+.react-kit-alert--inline {
+    .react-kit-alert-close-icon {
+        .anticon-close {
+            transition: color 0.3s;
+            margin: 24px;
+            color: #999999;
+        }
+    }
+}
+
+.react-kit-alert-close-text {
+    color: rgba(0, 0, 0, 0.45);
+    transition: color 0.3s;
+    &:hover {
+        color: rgba(0, 0, 0, 0.75);
+    }
+}
+.react-kit-alert-with-description {
+    align-items: flex-start;
+    padding: 15px 15px 15px 24px;
+    &.react-kit-alert-no-icon {
+        padding: 15px 15px;
+    }
+    .react-kit-alert-icon {
+        margin-right: 15px;
+        font-size: 24px;
+    }
+    .react-kit-alert-message {
+        display: block;
+        width: 70%;
+        font-size: 16px;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 16px;
+    }
+    .react-kit-alert-description {
+        display: block;
+    }
+}
+
+.react-kit-alert-banner {
+    margin-bottom: 0;
+    border: 0;
+    border-radius: 0;
+}
+.react-kit-alert-rtl {
+    .react-kit-alert-icon {
+        margin-right: auto;
+        margin-left: 8px;
+    }
+    .react-kit-alert-action {
+        margin-right: 8px;
+        margin-left: auto;
+    }
+    .react-kit-alert-close-icon {
+        margin-right: 8px;
+        margin-left: auto;
+    }
+    &.react-kit-alert-with-description {
+        padding-right: 24px;
+        padding-left: 15px;
+        .react-kit-alert-icon {
+            margin-right: auto;
+            margin-left: 15px;
+        }
+    }
+}
