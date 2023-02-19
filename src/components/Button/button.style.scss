@@ -1,25 +1,37 @@
 .btn-group-icon{
-    background-color: #ddd;
-    width:128px;
-    padding: 5px;
-    border-radius: 12px;
+    background-color: #eee;
+  border-radius: 12px;
     
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    display: inline-block;
     button {
-      height: 32px;
+      display: inline-block;
+     padding: 3px 8px;
       width: 32px;
       border: none;
-      background-color: inherit;
+      background-color: white;
+      
       
       &:hover {
-        background-color:#ccc;
+        background-color:#ddd;
       }
+    }
+    button:not(:last-child){
+      border-right: 1px solid #ddd;
     }
     
     button:first-child {
-      border-radius: 8px 0 0 8px;
+      border-radius: 4px 0 0 4px;
+    
+    
     }
     
     button:last-child {
-      border-radius: 0 8px 8px 0;
+      border-radius: 0 4px 4px 0;
+     
     }
   }
+.btn-group-icon-active{
+  background-color: #ddd!important;
+}

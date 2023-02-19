@@ -8,9 +8,14 @@ import { ReactComponent as PinIcon } from "./assets/img/pin.svg";
 import {ReactComponent as HeartIcon} from "./assets/img/heart.svg";
 import {ReactComponent as IconIcon} from "./assets/img/icon.svg";
 import {ReactComponent as SettingIcon} from "./assets/img/setting.svg"
+import {useState} from "react"
 
-
-const icons = [PinIcon, HeartIcon,IconIcon,SettingIcon]
+const icons = [
+  {id: 0, icon: PinIcon },
+  {id:1, icon: HeartIcon},
+  {id:2, icon:IconIcon},
+  {id:3, icon:SettingIcon},
+]
 function App() {
     const { t } = useTranslation();
     const { changeToAz, changeToEn } = useChangeLang();
@@ -19,16 +24,7 @@ function App() {
     return (
         <div className="App">
             
-         <ButtonGroup type="icon" icons={
-        <>
-            {icons.map((Item,index) =>(
-               <button key={index}>
-                 <Item/>
-               </button>
-            ))}
-                  
-        </>
-      }
+         <ButtonGroup type="icon" icons={icons}
          />
             
         </div>
